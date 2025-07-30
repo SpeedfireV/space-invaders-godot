@@ -21,7 +21,7 @@ func _physics_process(delta):
 		
 	move_and_slide() # TODO:
 
-func _input(event):
+func _input(event): #guwno
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
 
