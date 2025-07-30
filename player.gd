@@ -19,7 +19,7 @@ func _physics_process(delta):
 	if global_position.x > 1102 and velocity.x > 0:
 		velocity = Vector2.ZERO
 		
-	move_and_slide() # TODO:
+	move_and_slide() # TODO: #grasgargagr
 
 func _input(event):
 	if Input.is_action_just_pressed("shoot"):
