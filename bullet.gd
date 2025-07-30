@@ -13,6 +13,8 @@ func _ready():
 		attack_area.collision_mask = 1
 	else:
 		attack_area.collision_mask = 2
+
+	attack_area.area_entered.connect(_on_attack_area_entered)
 		
 
 func _process(delta):
@@ -24,5 +26,7 @@ func _process(delta):
 
 
 
-
-
+func _on_attack_area_entered(area: Area2D):
+	if area.get_parent() is Enemy:
+		area.get_parent().queue_free()
+		queue_free()

@@ -2,6 +2,10 @@ class_name Player extends CharacterBody2D
 
 @export var bullets_node: Node2D
 
+func _ready():
+	GameManager.player = self
+
+
 func _physics_process(delta):
 	if Input.is_action_pressed("move_left"):
 		velocity = Vector2.LEFT * 500
